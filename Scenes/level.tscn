@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bmfn77rrgc7ep"]
+
+[ext_resource type="PackedScene" uid="uid://qet1tfjqc86l" path="res://Scenes/player.tscn" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://b7443t23mo8fv" path="res://Scenes/opponent.tscn" id="2_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://cv0gdbx766set" path="res://Scenes/ball.tscn" id="3_6phgx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
+size = Vector2(1354, 36)
+
+[node name="Level" type="Node" unique_id=1162338658]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1039674885]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0.12941177, 0.14901961, 1)
+
+[node name="Player" parent="." unique_id=1603302206 instance=ExtResource("1_tumq0")]
+
+[node name="Border" type="StaticBody2D" parent="." unique_id=859281668]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=665770662]
+position = Vector2(670, -1)
+shape = SubResource("RectangleShape2D_tumq0")
+
+[node name="Border2" type="StaticBody2D" parent="." unique_id=973268390]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border2" unique_id=643426514]
+position = Vector2(682, 725)
+shape = SubResource("RectangleShape2D_tumq0")
+
+[node name="Opponent" parent="." unique_id=2082432867 instance=ExtResource("2_k5f4k")]
+position = Vector2(1259, 304)
+
+[node name="CharacterBody2D" parent="." unique_id=1549443071 instance=ExtResource("3_6phgx")]
+position = Vector2(673, 321)
