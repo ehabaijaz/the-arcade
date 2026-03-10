@@ -9,6 +9,11 @@
 
 <!-- HEADER -->
 <br />
+
+<p> This is a very weird arcade in which you can play a weird Pong and a weird Brick Breaker</p>
+<p> Originally designed to play 4 games in one, the developer suffered a mental breakdown due to the extreme amount of inconveniences caused by having more than 1 game in a project in Godot. </p>
+<p> This may or may not be due to the developer's skill issue, Godot's skill issue or both. </p>
+<p> Use the ESCAPE key to go back to the main menu. Use the arrow keys for PONG and Brick Breaker</p>
 <div align="center">
     <a href="https://github.com/BudzioT/Godot_Super-Wakatime">
         <img src="https://cloud-bo1ln2br1-hack-club-bot.vercel.app/0godotwaka22.png"  alt="Godot Wakatime"/>
