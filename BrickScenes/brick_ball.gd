@@ -4,8 +4,11 @@ var speed = 200
 var dir = Vector2.DOWN
 var is_active = true
 var collision
+var manager
 
 func _ready() -> void:
+	manager = get_tree().get_first_node_in_group("GameManagerBrick")
+	speed = 200 + (20 * manager.level)
 	velocity = Vector2(speed * -1, speed)
 
 func _physics_process(delta: float) -> void:
@@ -25,7 +28,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = -200
 
 func gameOver():
+	manager.score = 0
+	manager.level = 1
 	get_tree().reload_current_scene()
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
-	gameOver()
+	call_deferred('gameOver')

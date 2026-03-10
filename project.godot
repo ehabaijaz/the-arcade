@@ -36,6 +36,8 @@ folder_colors={
 [global_group]
 
 BallGroup=""
+Brick=""
+GameManagerBrick=""
 
 [gui]
 

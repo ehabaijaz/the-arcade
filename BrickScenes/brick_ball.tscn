@@ -6,12 +6,36 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5p8m"]
 radius = 12.0
 
+[sub_resource type="Curve" id="Curve_kju2y"]
+_data = [Vector2(0, 0.99175394), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_pncve"]
+offsets = PackedFloat32Array(0, 0.34729064, 0.35221675, 1)
+colors = PackedColorArray(0.5068584, 0.19415191, 0.70624954, 1, 0.701661, 0.50009143, 0.8968414, 1, 0.53743774, 0.22491243, 0.84005684, 1, 1, 1, 1, 1)
+
 [node name="Ball" type="CharacterBody2D" unique_id=2015584064]
 script = ExtResource("1_kju2y")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=493535257]
+z_index = 1
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_pncve")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508423413]
 shape = SubResource("CircleShape2D_i5p8m")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1533679874]
+modulate = Color(1, 1, 1, 0.90588236)
+amount = 1000
+texture = ExtResource("2_pncve")
+lifetime = 0.4
+emission_shape = 1
+emission_sphere_radius = 12.0
+gravity = Vector2(0, 0)
+scale_amount_min = 0.02
+scale_amount_max = 0.02
+scale_amount_curve = SubResource("Curve_kju2y")
+color_ramp = SubResource("Gradient_pncve")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1395100554]

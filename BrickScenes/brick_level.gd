@@ -7,10 +7,12 @@ var rows = 7
 var margin = 50
 
 func _ready() -> void:
+		preload("res://BrickScenes/game_manager.tscn")
 		setupLevel()
 	
 
 func setupLevel():
+	
 	var colors = get_colors()
 	for r in rows:
 		for c in columns:

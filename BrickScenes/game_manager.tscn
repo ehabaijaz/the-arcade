@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://qxw03l5wmnnf"]
+
+[ext_resource type="Script" uid="uid://b6up2qhrg5qsi" path="res://BrickScenes/game_manager.gd" id="1_kg0tj"]
+
+[node name="GameManager" type="Node" unique_id=7575480 groups=["GameManagerBrick"]]
+script = ExtResource("1_kg0tj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1967149439]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=765275980]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -183.0
+offset_top = -41.875
+offset_right = 183.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="CanvasLayer" unique_id=1802890602]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -167.0
+offset_top = -41.875
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 2

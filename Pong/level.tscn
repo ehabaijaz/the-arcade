@@ -21,6 +21,8 @@ script = ExtResource("1_81xng")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 129.0
+offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.078431375, 0.12941177, 0.14901961, 1)
@@ -90,7 +92,7 @@ position = Vector2(645, 730)
 shape = SubResource("RectangleShape2D_tumq0")
 
 [node name="Opponent" parent="." unique_id=2082432867 instance=ExtResource("2_k5f4k")]
-position = Vector2(1232, 340)
+position = Vector2(1121, 340)
 
 [node name="Ball" parent="." unique_id=1549443071 instance=ExtResource("3_6phgx")]
 position = Vector2(653, 352)

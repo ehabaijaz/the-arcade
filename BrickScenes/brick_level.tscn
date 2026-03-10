@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dspo2j248fuvr" path="res://BrickScenes/paddle.tscn" id="1_ystd2"]
 [ext_resource type="PackedScene" uid="uid://bb6pklbb37aib" path="res://BrickScenes/brick_ball.tscn" id="3_cl12q"]
 [ext_resource type="Texture2D" uid="uid://p7rtgf8ylbhy" path="res://BrickAssets/0f0f0378-e0cc-4f27-aa82-be980337a7e4.png" id="4_cl12q"]
+[ext_resource type="PackedScene" uid="uid://qxw03l5wmnnf" path="res://BrickScenes/game_manager.tscn" id="5_e2ciq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oikqp"]
 size = Vector2(20, 729)
@@ -19,6 +20,8 @@ size = Vector2(892.5, 64)
 
 [node name="BrickLevel" type="Node2D" unique_id=1668710287]
 script = ExtResource("1_vjmc1")
+
+[node name="GameManager" parent="." unique_id=7575480 instance=ExtResource("5_e2ciq")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=162702329]
 position = Vector2(575, 326)
