@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dspo2j248fuvr"]
+
+[ext_resource type="Script" uid="uid://crf6mo75mphep" path="res://BrickScenes/paddle.gd" id="1_anxbl"]
+[ext_resource type="Texture2D" uid="uid://csc3iwxg84dns" path="res://BrickAssets/paddle.png" id="1_f27ut"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anxbl"]
+radius = 15.0
+height = 176.0
+
+[node name="Paddle" type="CharacterBody2D" unique_id=893411415]
+script = ExtResource("1_anxbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=636945901]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_f27ut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1778700974]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_anxbl")

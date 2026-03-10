@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bb6pklbb37aib"]
+
+[ext_resource type="Script" uid="uid://o4f43jxvqxo1" path="res://BrickScenes/brick_ball.gd" id="1_kju2y"]
+[ext_resource type="Texture2D" uid="uid://djugn1abj7ytf" path="res://BrickAssets/ball.png" id="2_pncve"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5p8m"]
+radius = 12.0
+
+[node name="Ball" type="CharacterBody2D" unique_id=2015584064]
+script = ExtResource("1_kju2y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=493535257]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_pncve")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508423413]
+shape = SubResource("CircleShape2D_i5p8m")

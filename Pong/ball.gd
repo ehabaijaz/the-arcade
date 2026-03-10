@@ -22,3 +22,5 @@ func restart_ball():
 	velocity.x = [-1, 1].pick_random()
 	velocity.y = [-0.8, 0.8].pick_random()
 	
+	
+	

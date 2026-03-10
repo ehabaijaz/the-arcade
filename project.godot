@@ -17,16 +17,29 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/mode=2
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://BrickAssets/": "orange",
+"res://BrickScenes/": "orange",
+"res://Pong assets/": "red",
+"res://Pong/": "red"
+}
+
 [global_group]
 
 BallGroup=""
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [physics]
 
@@ -37,3 +50,4 @@ BallGroup=""
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
