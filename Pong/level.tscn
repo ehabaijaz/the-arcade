@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bmfn77rrgc7ep"]
+
+[ext_resource type="Script" uid="uid://rtdvshbgnjq3" path="res://Pong/level.gd" id="1_81xng"]
+[ext_resource type="PackedScene" uid="uid://qet1tfjqc86l" path="res://Pong/player.tscn" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://b7443t23mo8fv" path="res://Pong/opponent.tscn" id="2_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://cv0gdbx766set" path="res://Pong/ball.tscn" id="3_6phgx"]
+[ext_resource type="FontFile" uid="uid://ddckb5h2bxjei" path="res://PoetsenOne-Regular.ttf" id="5_s32iv"]
+[ext_resource type="AudioStream" uid="uid://t1skek4cheas" path="res://Pong assets/Assets/ping_pong_8bit_beeep.ogg" id="6_fw5hh"]
+[ext_resource type="AudioStream" uid="uid://dm0eqglh7oo4a" path="res://Pong assets/Assets/pongcutmusic.mp3" id="7_fw5hh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
+size = Vector2(1354, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqkje"]
+size = Vector2(59, 696)
+
+[node name="Level" type="Node" unique_id=1162338658]
+script = ExtResource("1_81xng")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1039674885]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0.12941177, 0.14901961, 1)
+
+[node name="PlayerScore" type="Label" parent="." unique_id=1296528830]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -33.0
+offset_right = -6.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_s32iv")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OpponentScore" type="Label" parent="." unique_id=1472142874]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 27.0
+offset_top = -33.0
+offset_right = 133.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_s32iv")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CountdownLabel" type="Label" parent="." unique_id=618671924]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_top = 28.0
+offset_right = 82.0
+offset_bottom = 76.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.8221591, 0.42765352, 0.20789695, 1)
+theme_override_fonts/font = ExtResource("5_s32iv")
+theme_override_font_sizes/font_size = 59
+text = "1"
+
+[node name="Player" parent="." unique_id=1603302206 instance=ExtResource("1_tumq0")]
+
+[node name="Border" type="StaticBody2D" parent="." unique_id=859281668]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=665770662]
+position = Vector2(658, -9)
+shape = SubResource("RectangleShape2D_tumq0")
+
+[node name="Border2" type="StaticBody2D" parent="." unique_id=973268390]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border2" unique_id=643426514]
+position = Vector2(645, 730)
+shape = SubResource("RectangleShape2D_tumq0")
+
+[node name="Opponent" parent="." unique_id=2082432867 instance=ExtResource("2_k5f4k")]
+position = Vector2(1232, 340)
+
+[node name="Ball" parent="." unique_id=1549443071 instance=ExtResource("3_6phgx")]
+position = Vector2(653, 352)
+
+[node name="OutOfBoundsL" type="Area2D" parent="." unique_id=1277458201]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBoundsL" unique_id=61175551]
+position = Vector2(-33, 360)
+shape = SubResource("RectangleShape2D_wqkje")
+
+[node name="OutOfBoundsR" type="Area2D" parent="." unique_id=784110760]
+position = Vector2(1346, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBoundsR" unique_id=1946611794]
+position = Vector2(-33, 360)
+shape = SubResource("RectangleShape2D_wqkje")
+
+[node name="CountdownTimer" type="Timer" parent="." unique_id=796803995]
+wait_time = 2.0
+one_shot = true
+
+[node name="ScoreSound" type="AudioStreamPlayer" parent="." unique_id=1535595088]
+stream = ExtResource("6_fw5hh")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=143046816]
+stream = ExtResource("7_fw5hh")
+autoplay = true
+
+[connection signal="body_entered" from="OutOfBoundsL" to="." method="_on_left_body_entered"]
+[connection signal="body_entered" from="OutOfBoundsR" to="." method="_on_right_body_entered"]
+[connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b7443t23mo8fv"]
+
+[ext_resource type="Script" uid="uid://c153p3tpyns5n" path="res://Pong/opponent.gd" id="1_cj3sh"]
+[ext_resource type="Texture2D" uid="uid://csfh5vp7r0685" path="res://Pong assets/Assets/Paddle.png" id="1_modcp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cj3sh"]
+size = Vector2(29, 121)
+
+[node name="Opponent" type="CharacterBody2D" unique_id=2082432867]
+position = Vector2(58, 147)
+script = ExtResource("1_cj3sh")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=410667722]
+texture = ExtResource("1_modcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=63874317]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_cj3sh")

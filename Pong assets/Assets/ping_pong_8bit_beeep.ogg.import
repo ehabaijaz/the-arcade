@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://t1skek4cheas"
+path="res://.godot/imported/ping_pong_8bit_beeep.ogg-b77fe89c5364a2c1f110444929f89a14.oggvorbisstr"
+
+[deps]
+
+source_file="res://Pong assets/Assets/ping_pong_8bit_beeep.ogg"
+dest_files=["res://.godot/imported/ping_pong_8bit_beeep.ogg-b77fe89c5364a2c1f110444929f89a14.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
