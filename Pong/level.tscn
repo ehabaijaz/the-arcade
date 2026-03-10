@@ -12,7 +12,7 @@
 size = Vector2(1354, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqkje"]
-size = Vector2(59, 696)
+size = Vector2(59, 629)
 
 [node name="Level" type="Node" unique_id=1162338658]
 script = ExtResource("1_81xng")
@@ -88,7 +88,7 @@ shape = SubResource("RectangleShape2D_tumq0")
 [node name="Border2" type="StaticBody2D" parent="." unique_id=973268390]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border2" unique_id=643426514]
-position = Vector2(645, 730)
+position = Vector2(681, 673)
 shape = SubResource("RectangleShape2D_tumq0")
 
 [node name="Opponent" parent="." unique_id=2082432867 instance=ExtResource("2_k5f4k")]
@@ -105,11 +105,11 @@ position = Vector2(-33, 360)
 shape = SubResource("RectangleShape2D_wqkje")
 
 [node name="OutOfBoundsR" type="Area2D" parent="." unique_id=784110760]
-position = Vector2(1346, 0)
+position = Vector2(1208, -48)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBoundsR" unique_id=1946611794]
-position = Vector2(-33, 360)
+position = Vector2(-33, 380.5)
 shape = SubResource("RectangleShape2D_wqkje")
 
 [node name="CountdownTimer" type="Timer" parent="." unique_id=796803995]

@@ -10,7 +10,9 @@ func _on_left_body_entered(body) -> void:
 	score_achieved()
 	OpponentScore += 1
 	
-
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://MainMenu/mainmenu.tscn")
 
 func _on_right_body_entered(body) -> void:
 	score_achieved()

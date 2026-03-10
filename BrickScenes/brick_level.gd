@@ -10,6 +10,9 @@ func _ready() -> void:
 		preload("res://BrickScenes/game_manager.tscn")
 		setupLevel()
 	
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://MainMenu/mainmenu.tscn")
 
 func setupLevel():
 	

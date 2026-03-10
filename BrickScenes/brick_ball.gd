@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 200
+var speed = 300
 var dir = Vector2.DOWN
 var is_active = true
 var collision
