@@ -10,11 +10,12 @@
 <!-- HEADER -->
 <br />
 
-<p> This is a very weird arcade in which you can play a weird Pong and a weird Brick Breaker</p>
-<p> Originally designed to play 4 games in one, the developer suffered a mental breakdown due to the extreme amount of inconveniences caused by having more than 1 game in a project in Godot. </p>
-<p> This may or may not be due to the developer's skill issue, Godot's skill issue or both. </p>
-<p> Use the ESCAPE key to go back to the main menu. Use the arrow keys for PONG and Brick Breaker</p>
-<p> NO AI was used for this project and this README.</p>
+<h2>Weird Description</h2>
+-This is a weird arcade because its not really an arcade, an arcade would have alot more games with much more quality.  This is weird. Weird arcade. I don't remember much about the process of making this game but I remember being very sleepy which explains alot. 
+<h2> Weird Features </h2>
+-Play Pong, but the ball is a bit weird. Controls : WS or UpArrowKey and DownArrowKey to move the paddle up and down
+-Play Brick Breaker but feels kinda weird. Controls :  AD or LeftArrowKey and RightArrowKey to move left and right 
+
 
 
 <!-- LICENSE -->
