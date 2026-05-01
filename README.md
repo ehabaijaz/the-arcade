@@ -16,6 +16,7 @@
 -Play Pong, but the ball is a bit weird. Controls : WS or UpArrowKey and DownArrowKey to move the paddle up and down
 -Play Brick Breaker but feels kinda weird. Controls :  AD or LeftArrowKey and RightArrowKey to move left and right 
 
+NO AI used in this game and in README or itch description
 
 
 <!-- LICENSE -->
